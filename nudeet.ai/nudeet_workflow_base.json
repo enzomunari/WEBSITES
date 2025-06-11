@@ -1,0 +1,1467 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "pornmaster_proSDXLV4VAE.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Charger Point de Contrôle"
+    }
+  },
+  "3": {
+    "inputs": {
+      "weight": 0.5000000000000001,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "4",
+        0
+      ],
+      "ipadapter": [
+        "4",
+        1
+      ],
+      "image": [
+        "514",
+        0
+      ],
+      "attn_mask": [
+        "225",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
+    }
+  },
+  "4": {
+    "inputs": {
+      "preset": "PLUS FACE (portraits)",
+      "model": [
+        "502",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image": "left 2 832x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": "painting, outdoor, big chin, tattoos, pubic hair, 3d, makeup, cgi, illustration, blur, earings, wedding dress, (man), lowres, text, error, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, (4_persons), (curvy), sexy, busty, scarf, collar",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "seed": 507881364052882,
+      "steps": 10,
+      "cfg": 2.5,
+      "sampler_name": "dpmpp_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "331",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "301",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "15": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "65": {
+    "inputs": {
+      "input_faces_order": "left-right",
+      "input_faces_index": [
+        "202",
+        0
+      ],
+      "detect_gender_input": "no",
+      "source_faces_order": "left-right",
+      "source_faces_index": "0",
+      "detect_gender_source": "no",
+      "console_log_level": 1
+    },
+    "class_type": "ReActorOptions",
+    "_meta": {
+      "title": "ReActor 🌌 Options"
+    }
+  },
+  "89": {
+    "inputs": {
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "retinaface_resnet50",
+      "face_restore_model": "none",
+      "face_restore_visibility": 0.10000000000000002,
+      "codeformer_weight": 0.10000000000000002,
+      "input_image": [
+        "15",
+        0
+      ],
+      "source_image": [
+        "514",
+        0
+      ],
+      "options": [
+        "65",
+        0
+      ],
+      "face_boost": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ReActorFaceSwapOpt",
+    "_meta": {
+      "title": "ReActor 🌌 Fast Face Swap [OPTIONS]"
+    }
+  },
+  "91": {
+    "inputs": {
+      "enabled": true,
+      "boost_model": "GFPGANv1.4.pth",
+      "interpolation": "Bilinear",
+      "visibility": 0.6000000000000001,
+      "codeformer_weight": 0.6000000000000001,
+      "restore_with_main_after": false
+    },
+    "class_type": "ReActorFaceBoost",
+    "_meta": {
+      "title": "ReActor 🌌 Face Booster"
+    }
+  },
+  "123": {
+    "inputs": {
+      "Value": 1
+    },
+    "class_type": "DF_Integer",
+    "_meta": {
+      "title": "Face 2 Location (L-R)"
+    }
+  },
+  "124": {
+    "inputs": {
+      "Value": 2
+    },
+    "class_type": "DF_Integer",
+    "_meta": {
+      "title": "Face 3 Location (L-R)"
+    }
+  },
+  "125": {
+    "inputs": {
+      "Value": 3
+    },
+    "class_type": "DF_Integer",
+    "_meta": {
+      "title": "Face 4 Location (L-R)"
+    }
+  },
+  "126": {
+    "inputs": {
+      "Value": 0
+    },
+    "class_type": "DF_Integer",
+    "_meta": {
+      "title": "Face 1 Location (L-R)"
+    }
+  },
+  "202": {
+    "inputs": {
+      "int_": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "CR Integer To String",
+    "_meta": {
+      "title": "🔧 CR Integer To String"
+    }
+  },
+  "220": {
+    "inputs": {
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image (PRESWAP)"
+    }
+  },
+  "225": {
+    "inputs": {
+      "width": [
+        "299",
+        0
+      ],
+      "height": [
+        "299",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "245",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "240": {
+    "inputs": {
+      "image": "left 3 832x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "241": {
+    "inputs": {
+      "image": "1 of 4 1000x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "242": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Number of Person"
+    }
+  },
+  "245": {
+    "inputs": {
+      "select": [
+        "242",
+        2
+      ],
+      "mask_1": [
+        "248",
+        1
+      ],
+      "mask_2": [
+        "9",
+        1
+      ],
+      "mask_3": [
+        "240",
+        1
+      ],
+      "mask_4": [
+        "241",
+        1
+      ]
+    },
+    "class_type": "Mask Switch (JPS)",
+    "_meta": {
+      "title": "Mask Switch P1"
+    }
+  },
+  "248": {
+    "inputs": {
+      "image": "empy.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "299": {
+    "inputs": {
+      "original": false,
+      "latent": [
+        "301",
+        0
+      ]
+    },
+    "class_type": "DF_Get_latent_size",
+    "_meta": {
+      "title": "Get latent size"
+    }
+  },
+  "301": {
+    "inputs": {
+      "width": 832,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Image Size"
+    }
+  },
+  "314": {
+    "inputs": {
+      "text": [
+        "392",
+        2
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "320": {
+    "inputs": {
+      "text": "a girl naked, innie pussy, perfect face, ((cute face)), (((nude))), (((naked))), (1_girl)",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Poitive Prompt"
+    }
+  },
+  "321": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "320",
+        0
+      ],
+      "text_b": [
+        "314",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "323": {
+    "inputs": {
+      "text": [
+        "321",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "FINAL PROMPT"
+    }
+  },
+  "328": {
+    "inputs": {
+      "lora_name": "BallsDeepThroat-000009.safetensors",
+      "lora_weight": 1.0000000000000002,
+      "force_fetch": false,
+      "append_loraname_if_empty": false
+    },
+    "class_type": "LoraLoaderStackedVanilla",
+    "_meta": {
+      "title": "LORA INFO"
+    }
+  },
+  "331": {
+    "inputs": {
+      "text": [
+        "517",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "502",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "334": {
+    "inputs": {
+      "face": false,
+      "left_eyebrow": false,
+      "right_eyebrow": false,
+      "left_eye": false,
+      "right_eye": false,
+      "left_pupil": false,
+      "right_pupil": false,
+      "lips": true,
+      "number_of_faces": 1,
+      "confidence": 0.5000000000000001,
+      "refine_mask": true,
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "APersonFaceLandmarkMaskGenerator",
+    "_meta": {
+      "title": "A Person Face Landmark Mask Generator"
+    }
+  },
+  "335": {
+    "inputs": {
+      "mask": [
+        "338",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "337": {
+    "inputs": {
+      "masks": [
+        "354",
+        0
+      ]
+    },
+    "class_type": "Mask Fill Holes",
+    "_meta": {
+      "title": "Mask Fill Holes"
+    }
+  },
+  "338": {
+    "inputs": {
+      "radius": 10,
+      "masks": [
+        "337",
+        0
+      ]
+    },
+    "class_type": "Mask Gaussian Region",
+    "_meta": {
+      "title": "Mask Gaussian Region"
+    }
+  },
+  "339": {
+    "inputs": {
+      "dilation": 115,
+      "mask": [
+        "334",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "351": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "15",
+        0
+      ],
+      "source": [
+        "89",
+        0
+      ],
+      "mask": [
+        "359",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "ImageCompositeMasked"
+    }
+  },
+  "353": {
+    "inputs": {
+      "images": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image SWAPPED"
+    }
+  },
+  "354": {
+    "inputs": {
+      "x": 0,
+      "y": 45,
+      "angle": 0,
+      "duplication_factor": 1,
+      "roll": true,
+      "incremental": true,
+      "padding_mode": "border",
+      "mask": [
+        "339",
+        0
+      ]
+    },
+    "class_type": "OffsetMask",
+    "_meta": {
+      "title": "Offset Mask"
+    }
+  },
+  "355": {
+    "inputs": {
+      "face": true,
+      "left_eyebrow": false,
+      "right_eyebrow": false,
+      "left_eye": false,
+      "right_eye": false,
+      "left_pupil": false,
+      "right_pupil": false,
+      "lips": false,
+      "number_of_faces": 1,
+      "confidence": 0.5000000000000001,
+      "refine_mask": true,
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "APersonFaceLandmarkMaskGenerator",
+    "_meta": {
+      "title": "A Person Face Landmark Mask Generator"
+    }
+  },
+  "356": {
+    "inputs": {
+      "dilation": 10,
+      "mask": [
+        "355",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "357": {
+    "inputs": {
+      "radius": 8,
+      "masks": [
+        "356",
+        0
+      ]
+    },
+    "class_type": "Mask Gaussian Region",
+    "_meta": {
+      "title": "Mask Gaussian Region"
+    }
+  },
+  "358": {
+    "inputs": {
+      "mask": [
+        "357",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "359": {
+    "inputs": {
+      "masks_a": [
+        "357",
+        0
+      ],
+      "masks_b": [
+        "338",
+        0
+      ]
+    },
+    "class_type": "Masks Subtract",
+    "_meta": {
+      "title": "Masks Subtract"
+    }
+  },
+  "360": {
+    "inputs": {
+      "mask": [
+        "359",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "374": {
+    "inputs": {
+      "masks": [
+        "384",
+        0
+      ]
+    },
+    "class_type": "Mask Fill Holes",
+    "_meta": {
+      "title": "Mask Fill Holes"
+    }
+  },
+  "375": {
+    "inputs": {
+      "mask": [
+        "383",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  },
+  "382": {
+    "inputs": {
+      "dilation": 25,
+      "mask": [
+        "385",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "383": {
+    "inputs": {
+      "radius": 5,
+      "masks": [
+        "374",
+        0
+      ]
+    },
+    "class_type": "Mask Gaussian Region",
+    "_meta": {
+      "title": "Mask Gaussian Region"
+    }
+  },
+  "384": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "angle": 0,
+      "duplication_factor": 1,
+      "roll": true,
+      "incremental": true,
+      "padding_mode": "border",
+      "mask": [
+        "382",
+        0
+      ]
+    },
+    "class_type": "OffsetMask",
+    "_meta": {
+      "title": "Offset Mask"
+    }
+  },
+  "385": {
+    "inputs": {
+      "face": false,
+      "left_eyebrow": false,
+      "right_eyebrow": false,
+      "left_eye": false,
+      "right_eye": false,
+      "left_pupil": false,
+      "right_pupil": false,
+      "lips": false,
+      "number_of_faces": 1,
+      "confidence": 0.5000000000000001,
+      "refine_mask": false,
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "APersonFaceLandmarkMaskGenerator",
+    "_meta": {
+      "title": "A Person Face Landmark Mask Generator"
+    }
+  },
+  "389": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "451",
+        0
+      ],
+      "source": [
+        "15",
+        0
+      ],
+      "mask": [
+        "383",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "ImageCompositeMasked"
+    }
+  },
+  "392": {
+    "inputs": {
+      "lora_name": "cameltoe.safetensors",
+      "strength_model": 0.2,
+      "strength_clip": 0.2,
+      "query_tags": true,
+      "tags_out": true,
+      "print_tags": true,
+      "bypass": false,
+      "force_fetch": false,
+      "model": [
+        "1",
+        0
+      ],
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "LoraLoaderTagsQuery",
+    "_meta": {
+      "title": "LoraLoaderTagsQuery"
+    }
+  },
+  "410": {
+    "inputs": {
+      "boolean": [
+        "461",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "411": {
+    "inputs": {
+      "text": [
+        "410",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "451": {
+    "inputs": {
+      "boolean": [
+        "473",
+        0
+      ],
+      "on_true": [
+        "351",
+        0
+      ],
+      "on_false": [
+        "460",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "460": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "89",
+        0
+      ],
+      "source": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "Normal Faceswapped"
+    }
+  },
+  "461": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "blowjob",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "462": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "sucking",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "463": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "licking",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "464": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "deepthroat",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "465": {
+    "inputs": {
+      "text": [
+        "466",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "466": {
+    "inputs": {
+      "boolean": [
+        "462",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "467": {
+    "inputs": {
+      "text": [
+        "468",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "468": {
+    "inputs": {
+      "boolean": [
+        "464",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "469": {
+    "inputs": {
+      "text": [
+        "470",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "470": {
+    "inputs": {
+      "boolean": [
+        "463",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "472": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "492",
+        0
+      ],
+      "text_b": [
+        "489",
+        0
+      ],
+      "text_c": [
+        "411",
+        0
+      ],
+      "text_d": [
+        "465",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "473": {
+    "inputs": {
+      "regex": "True",
+      "input2": [
+        "493",
+        0
+      ]
+    },
+    "class_type": "LogicGateCompareString",
+    "_meta": {
+      "title": "AContainsB(String)"
+    }
+  },
+  "474": {
+    "inputs": {
+      "boolean": [
+        "473",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "475": {
+    "inputs": {
+      "text": [
+        "474",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "476": {
+    "inputs": {
+      "boolean": [
+        "477",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "477": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "sleeping",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "478": {
+    "inputs": {
+      "text": [
+        "476",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "479": {
+    "inputs": {
+      "boolean": [
+        "477",
+        0
+      ],
+      "on_true": [
+        "389",
+        0
+      ],
+      "on_false": [
+        "451",
+        0
+      ]
+    },
+    "class_type": "easy ifElse",
+    "_meta": {
+      "title": "If else"
+    }
+  },
+  "480": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "467",
+        0
+      ],
+      "text_b": [
+        "469",
+        0
+      ],
+      "text_c": [
+        "483",
+        0
+      ],
+      "text_d": [
+        "486",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "481": {
+    "inputs": {
+      "boolean": [
+        "482",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "482": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "oral",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "483": {
+    "inputs": {
+      "text": [
+        "481",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "484": {
+    "inputs": {
+      "boolean": [
+        "485",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "485": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "de3pthr0at",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "486": {
+    "inputs": {
+      "text": [
+        "484",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "487": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "blowjob",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "488": {
+    "inputs": {
+      "boolean": [
+        "487",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "489": {
+    "inputs": {
+      "text": [
+        "488",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "490": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "sub_text": "deep throat",
+      "case_insensitive": true
+    },
+    "class_type": "Text Contains",
+    "_meta": {
+      "title": "Text Contains"
+    }
+  },
+  "491": {
+    "inputs": {
+      "boolean": [
+        "490",
+        0
+      ]
+    },
+    "class_type": "Boolean To Text",
+    "_meta": {
+      "title": "Boolean To Text"
+    }
+  },
+  "492": {
+    "inputs": {
+      "text": [
+        "491",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "493": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "472",
+        0
+      ],
+      "text_b": [
+        "480",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "499": {
+    "inputs": {
+      "directory": "C:\\Users\\User\\Downloads\\v268\\App\\ComfyUI\\input\\upload",
+      "image_load_cap": 1,
+      "start_index": 0,
+      "load_always": true
+    },
+    "class_type": "LoadImagesFromDir //Inspire",
+    "_meta": {
+      "title": "Load Image Batch From Dir (Inspire)"
+    }
+  },
+  "500": {
+    "inputs": {
+      "images": [
+        "499",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image"
+    }
+  },
+  "502": {
+    "inputs": {
+      "lora_name": "cameltoe.safetensors",
+      "strength_model": 0.10000000000000002,
+      "strength_clip": 0.10000000000000002,
+      "model": [
+        "392",
+        0
+      ],
+      "clip": [
+        "392",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Pose LoRA"
+    }
+  },
+  "506": {
+    "inputs": {
+      "images": [
+        "514",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image"
+    }
+  },
+  "514": {
+    "inputs": {
+      "number_of_faces": 1,
+      "scale_factor": 3.9000000000000004,
+      "shift_factor": 0.4900000000000001,
+      "start_index": 0,
+      "max_faces_per_image": 50,
+      "aspect_ratio": "1:1",
+      "image": [
+        "499",
+        0
+      ]
+    },
+    "class_type": "AutoCropFaces",
+    "_meta": {
+      "title": "Auto Crop Faces"
+    }
+  },
+  "517": {
+    "inputs": {
+      "text": [
+        "518",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "FINALP2"
+    }
+  },
+  "518": {
+    "inputs": {
+      "text": [
+        "323",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "FINALP1"
+    }
+  },
+  "519": {
+    "inputs": {
+      "anything": [
+        "518",
+        0
+      ]
+    },
+    "class_type": "LayerUtility: PrintInfo",
+    "_meta": {
+      "title": "LayerUtility: PrintInfo"
+    }
+  },
+  "520": {
+    "inputs": {
+      "text": [
+        "519",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "524": {
+    "inputs": {
+      "session_id": "nudeet_session",
+      "quality": 92,
+      "optimize": true,
+      "progressive": true,
+      "is_censored": false,
+      "user_hash": "",
+      "images": [
+        "479",
+        0
+      ]
+    },
+    "class_type": "NudeetSaveJPG",
+    "_meta": {
+      "title": "Nudeet Save JPG"
+    }
+  }
+}

@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Root styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white !important;
+  color: #111827 !important;
+}
+
+/* Force orange/red gradients */
+.bg-gradient-to-r.from-orange-500.to-red-500 {
+  background: linear-gradient(to right, #f97316, #ef4444) !important;
+}
+
+.bg-gradient-to-br.from-orange-50.via-red-50.to-pink-50 {
+  background: linear-gradient(to bottom right, #fff7ed, #fef2f2, #fdf2f8) !important;
+}
+
+.bg-gradient-to-br.from-gray-50.to-gray-100 {
+  background: linear-gradient(to bottom right, #f9fafb, #f3f4f6) !important;
+}
+
+/* Orange logo background */
+.bg-gradient-to-br.from-orange-500.to-red-500 {
+  background: linear-gradient(to bottom right, #f97316, #ef4444) !important;
+}
+
+/* Gradient text */
+.text-transparent.bg-clip-text.bg-gradient-to-r.from-orange-500.to-red-500,
+.bg-clip-text.bg-gradient-to-r.from-orange-500.to-red-500 {
+  background: linear-gradient(to right, #f97316, #ef4444) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Trust badge colors */
+.bg-gradient-to-r.from-orange-100.to-red-100 {
+  background: linear-gradient(to right, #ffedd5, #fee2e2) !important;
+}
+
+.border-orange-200 {
+  border-color: #fed7aa !important;
+}
+
+.text-orange-600 {
+  color: #ea580c !important;
+}
+
+.text-orange-800 {
+  color: #9a3412 !important;
+}
+
+/* Before/after gallery colors */
+.bg-gradient-to-br.from-gray-200.to-gray-400 {
+  background: linear-gradient(to bottom right, #e5e7eb, #9ca3af) !important;
+}
+
+.bg-gradient-to-br.from-orange-500.to-red-600 {
+  background: linear-gradient(to bottom right, #f97316, #dc2626) !important;
+}
+
+.bg-gradient-to-br.from-stone-200.to-stone-400 {
+  background: linear-gradient(to bottom right, #e7e5e4, #a8a29e) !important;
+}
+
+.bg-gradient-to-br.from-emerald-500.to-teal-600 {
+  background: linear-gradient(to bottom right, #10b981, #0d9488) !important;
+}
+
+.bg-gradient-to-br.from-slate-200.to-slate-400 {
+  background: linear-gradient(to bottom right, #e2e8f0, #94a3b8) !important;
+}
+
+.bg-gradient-to-br.from-purple-500.to-pink-600 {
+  background: linear-gradient(to bottom right, #8b5cf6, #db2777) !important;
+}
+
+.bg-gradient-to-br.from-neutral-200.to-neutral-400 {
+  background: linear-gradient(to bottom right, #e5e5e5, #a3a3a3) !important;
+}
+
+.bg-gradient-to-br.from-indigo-500.to-blue-600 {
+  background: linear-gradient(to bottom right, #6366f1, #2563eb) !important;
+}
+
+/* Orange badge for AI Generated */
+.bg-orange-500 {
+  background-color: #f97316 !important;
+}
+
+/* Star colors */
+.text-yellow-400 {
+  color: #facc15 !important;
+}
+
+.fill-current {
+  fill: currentColor !important;
+}
+
+.text-green-500 {
+  color: #22c55e !important;
+}
+
+/* Feature gradient backgrounds */
+.bg-gradient-to-br.from-blue-500.to-cyan-400 {
+  background: linear-gradient(to bottom right, #3b82f6, #22d3ee) !important;
+}
+
+.bg-gradient-to-br.from-purple-500.to-pink-400 {
+  background: linear-gradient(to bottom right, #8b5cf6, #f472b6) !important;
+}
+
+.bg-gradient-to-br.from-emerald-500.to-teal-400 {
+  background: linear-gradient(to bottom right, #10b981, #2dd4bf) !important;
+}
+
+.bg-gradient-to-br.from-orange-500.to-red-400 {
+  background: linear-gradient(to bottom right, #f97316, #f87171) !important;
+}
+
+/* Stats icon colors */
+.text-orange-500 {
+  color: #f97316 !important;
+}
+
+/* Testimonial avatars */
+.bg-gradient-to-br.from-blue-400.to-blue-600 {
+  background: linear-gradient(to bottom right, #60a5fa, #2563eb) !important;
+}
+
+.bg-gradient-to-br.from-purple-400.to-purple-600 {
+  background: linear-gradient(to bottom right, #c084fc, #9333ea) !important;
+}
+
+.bg-gradient-to-br.from-emerald-400.to-emerald-600 {
+  background: linear-gradient(to bottom right, #34d399, #059669) !important;
+}
+
+/* Button hover effects */
+.hover\:from-orange-600:hover {
+  background: linear-gradient(to right, #ea580c, #dc2626) !important;
+}
+
+.hover\:to-red-600:hover {
+  background: linear-gradient(to right, #ea580c, #dc2626) !important;
+}
+
+/* Shadows */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Ensure white backgrounds */
+.bg-white {
+  background-color: white !important;
+}
+
+.bg-gray-900 {
+  background-color: #111827 !important;
+}
+
+/* Text colors */
+.text-white {
+  color: white !important;
+}
+
+.text-gray-900 {
+  color: #111827 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+/* Borders */
+.border-gray-100 {
+  border-color: #f3f4f6 !important;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.border-gray-800 {
+  border-color: #1f2937 !important;
+}
+
+/* Rounded corners */
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* Transform and transitions */
+.transform {
+  transform: translateX(var(--tw-translate-x, 0)) translateY(var(--tw-translate-y, 0)) rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1)) !important;
+}
+
+.transition-all {
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Backdrop blur */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* Responsive spacing - these work with Tailwind */
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-8 { padding-left: 2rem; padding-right: 2rem; }
+.px-12 { padding-left: 3rem; padding-right: 3rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+.py-32 { padding-top: 8rem; padding-bottom: 8rem; }
+
+.pt-20 { padding-top: 5rem; }
+.pb-32 { padding-bottom: 8rem; }
+
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mb-16 { margin-bottom: 4rem; }
+.mb-20 { margin-bottom: 5rem; }
+
+/* Font weights */
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+
+/* Font sizes */
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-5xl { font-size: 3rem; line-height: 1; }
+.text-6xl { font-size: 3.75rem; line-height: 1; }
+.text-7xl { font-size: 4.5rem; line-height: 1; }
+
+/* Mobile responsiveness */
+@media (min-width: 768px) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .md\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}

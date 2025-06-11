@@ -1,0 +1,175 @@
+[
+  {
+    "id": "event_1749602427987_ud09u23og",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-11T00:40:27.987Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 469164,
+      "ipAddress": "2a01:cb0c:8a8e:f900:bd0e:7363:52f4:5c8d"
+    }
+  },
+  {
+    "id": "event_1749581221032_fclm1ijoc",
+    "userId": "user_1749581181345_tptvlykhy",
+    "deviceId": "device_1749581181346_l50yqhle3",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_completed",
+    "timestamp": "2025-06-10T18:47:01.032Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "success": true,
+      "imageUrl": "http://127.0.0.1:8188/view?filename=deeplab_session_1749581205859_b69ut9f6y_output_20250610_204700_057_1440_696_d551bf41_00000_7063fb.jpg&subfolder=deeplab_session_1749581205859_b69ut9f6y&type=output",
+      "ipAddress": "2a01:cb0c:8a8e:f900:ed81:5506:7d9e:5009"
+    }
+  },
+  {
+    "id": "event_1749581205850_dogrp47r8",
+    "userId": "user_1749581181345_tptvlykhy",
+    "deviceId": "device_1749581181346_l50yqhle3",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-10T18:46:45.850Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 580674,
+      "ipAddress": "2a01:cb0c:8a8e:f900:ed81:5506:7d9e:5009"
+    }
+  },
+  {
+    "id": "event_1749574491995_tobrww2ja",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_completed",
+    "timestamp": "2025-06-10T16:54:51.995Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "success": true,
+      "imageUrl": "http://127.0.0.1:8188/view?filename=deeplab_session_1749574476808_9wu36e9yo_output_20250610_185448_755_1440_696_9f13645c_00000_e5120d.jpg&subfolder=deeplab_session_1749574476808_9wu36e9yo&type=output",
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749574476801_u5527ct8v",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-10T16:54:36.801Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 46851,
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749574465006_gseewqpz3",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_completed",
+    "timestamp": "2025-06-10T16:54:25.006Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "success": true,
+      "imageUrl": "http://127.0.0.1:8188/view?filename=deeplab_session_1749574444804_eh77aqsxc_output_20250610_185421_704_1440_696_1510d41a_00000_0540b1.jpg&subfolder=deeplab_session_1749574444804_eh77aqsxc&type=output",
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749574444795_l7fkpfziy",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-10T16:54:04.795Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 46851,
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749574388951_sh4nddwrb",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_completed",
+    "timestamp": "2025-06-10T16:53:08.951Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "success": true,
+      "imageUrl": "http://127.0.0.1:8188/view?filename=deeplab_session_1749574368763_lbdfuweff_output_20250610_185306_165_1440_696_c73b651a_00000_a124a2.jpg&subfolder=deeplab_session_1749574368763_lbdfuweff&type=output",
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749574368746_ul92frt0g",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-10T16:52:48.746Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 46851,
+      "ipAddress": "2a01:cb0c:8a8e:f900:8408:7a20:7f5d:668c"
+    }
+  },
+  {
+    "id": "event_1749510617263_32ca89a2t",
+    "userId": "user_1749069887053_al4lxb4nc",
+    "deviceId": "device_1749069887053_8ctl8vvpo",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_failed",
+    "timestamp": "2025-06-09T23:10:17.263Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "error": "Failed to upload image: fetch failed",
+      "ipAddress": "::1"
+    }
+  },
+  {
+    "id": "event_1749510617256_el9i6gg6o",
+    "userId": "user_1749069887053_al4lxb4nc",
+    "deviceId": "device_1749069887053_8ctl8vvpo",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_started",
+    "timestamp": "2025-06-09T23:10:17.256Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "imageSize": 445721,
+      "ipAddress": "::1"
+    }
+  },
+  {
+    "id": "event_1749602448287_cgtpxjm6w",
+    "userId": "user_1749574354204_q82qysqvt",
+    "deviceId": "device_1749574354204_adpaqnrkf",
+    "site": "deeplab",
+    "eventType": "professional_headshot_generation_completed",
+    "timestamp": "2025-06-11T00:40:48.287Z",
+    "metadata": {
+      "environment": "office",
+      "style": "suit",
+      "success": true,
+      "imageUrl": "http://127.0.0.1:8188/view?filename=deeplab_session_1749602427997_f8q4kka3e_output_20250611_024045_629_6920_972_6695f3f4_00000_15a198.jpg&subfolder=deeplab_session_1749602427997_f8q4kka3e&type=output",
+      "ipAddress": "2a01:cb0c:8a8e:f900:bd0e:7363:52f4:5c8d"
+    }
+  }
+]

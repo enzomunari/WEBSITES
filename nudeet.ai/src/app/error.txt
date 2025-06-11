@@ -1,0 +1,10 @@
+Parsing ecmascript source code failed
+  209 |     <>
+  210 |       {/* Custom animations and styles */}
+> 211 |     <style jsx global>{`
+      |     ^
+  212 |       @keyframes float-heart {
+  213 |         0% {
+  214 |           transform: translateY(100vh) rotate(0deg);
+
+Expected ',', got '< (jsx tag start)'

@@ -1,0 +1,565 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "pornmaster_proSDXLV4VAE.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Charger Point de Contrôle"
+    }
+  },
+  "3": {
+    "inputs": {
+      "weight": 0.5000000000000001,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "4",
+        0
+      ],
+      "ipadapter": [
+        "4",
+        1
+      ],
+      "image": [
+        "561",
+        3
+      ],
+      "attn_mask": [
+        "225",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
+    }
+  },
+  "4": {
+    "inputs": {
+      "preset": "PLUS FACE (portraits)",
+      "model": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image": "left 2 832x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": "painting, big chin, tattoos, 3d, cgi, illustration, blur, earings, wedding dress, lowres, text, error, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, (4_persons), naked, nsfw, nude, tits sexy, (2_persons), Heterochromia, undressed, explicit, closeup, low neck, cleavage, facing camera, from front, sunglasses, full body",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "14": {
+    "inputs": {
+      "seed": 1090339648086142,
+      "steps": 10,
+      "cfg": 3,
+      "sampler_name": "dpmpp_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "3",
+        0
+      ],
+      "positive": [
+        "331",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "301",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "15": {
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "65": {
+    "inputs": {
+      "input_faces_order": "left-right",
+      "input_faces_index": [
+        "202",
+        0
+      ],
+      "detect_gender_input": "no",
+      "source_faces_order": "left-right",
+      "source_faces_index": "0",
+      "detect_gender_source": "no",
+      "console_log_level": 1
+    },
+    "class_type": "ReActorOptions",
+    "_meta": {
+      "title": "ReActor 🌌 Options"
+    }
+  },
+  "89": {
+    "inputs": {
+      "enabled": true,
+      "swap_model": "inswapper_128.onnx",
+      "facedetection": "retinaface_resnet50",
+      "face_restore_model": "GFPGANv1.4.pth",
+      "face_restore_visibility": 1,
+      "codeformer_weight": 0.6000000000000001,
+      "input_image": [
+        "15",
+        0
+      ],
+      "source_image": [
+        "561",
+        3
+      ],
+      "options": [
+        "65",
+        0
+      ],
+      "face_boost": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "ReActorFaceSwapOpt",
+    "_meta": {
+      "title": "ReActor 🌌 Fast Face Swap [OPTIONS]"
+    }
+  },
+  "91": {
+    "inputs": {
+      "enabled": false,
+      "boost_model": "GFPGANv1.3.pth",
+      "interpolation": "Bilinear",
+      "visibility": 0.5000000000000001,
+      "codeformer_weight": 0.20000000000000004,
+      "restore_with_main_after": true
+    },
+    "class_type": "ReActorFaceBoost",
+    "_meta": {
+      "title": "ReActor 🌌 Face Booster"
+    }
+  },
+  "126": {
+    "inputs": {
+      "Value": 0
+    },
+    "class_type": "DF_Integer",
+    "_meta": {
+      "title": "Face 1 Location (L-R)"
+    }
+  },
+  "202": {
+    "inputs": {
+      "int_": [
+        "126",
+        0
+      ]
+    },
+    "class_type": "CR Integer To String",
+    "_meta": {
+      "title": "🔧 CR Integer To String"
+    }
+  },
+  "220": {
+    "inputs": {
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image (PRESWAP)"
+    }
+  },
+  "225": {
+    "inputs": {
+      "width": [
+        "299",
+        0
+      ],
+      "height": [
+        "299",
+        1
+      ],
+      "keep_proportions": false,
+      "upscale_method": "nearest-exact",
+      "crop": "disabled",
+      "mask": [
+        "245",
+        0
+      ]
+    },
+    "class_type": "ResizeMask",
+    "_meta": {
+      "title": "Resize Mask"
+    }
+  },
+  "240": {
+    "inputs": {
+      "image": "left 3 832x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "241": {
+    "inputs": {
+      "image": "1 of 4 1000x832.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "242": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false
+    },
+    "class_type": "ImpactSwitch",
+    "_meta": {
+      "title": "Number of Person"
+    }
+  },
+  "245": {
+    "inputs": {
+      "select": [
+        "242",
+        2
+      ],
+      "mask_1": [
+        "248",
+        1
+      ],
+      "mask_2": [
+        "9",
+        1
+      ],
+      "mask_3": [
+        "240",
+        1
+      ],
+      "mask_4": [
+        "241",
+        1
+      ]
+    },
+    "class_type": "Mask Switch (JPS)",
+    "_meta": {
+      "title": "Mask Switch P1"
+    }
+  },
+  "248": {
+    "inputs": {
+      "image": "empy.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "299": {
+    "inputs": {
+      "original": false,
+      "latent": [
+        "301",
+        0
+      ]
+    },
+    "class_type": "DF_Get_latent_size",
+    "_meta": {
+      "title": "Get latent size"
+    }
+  },
+  "301": {
+    "inputs": {
+      "width": 832,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Image Size"
+    }
+  },
+  "320": {
+    "inputs": {
+      "text": "color background, depth of field, perfect face, solo, high quality, 4k, hd, highly detailed face, perfect eyes, headshot, medium shot",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "ttN text",
+    "_meta": {
+      "title": "Poitive Prompt"
+    }
+  },
+  "328": {
+    "inputs": {
+      "lora_name": "BallsDeepThroat-000009.safetensors",
+      "lora_weight": 1.0000000000000002,
+      "force_fetch": false,
+      "append_loraname_if_empty": false
+    },
+    "class_type": "LoraLoaderStackedVanilla",
+    "_meta": {
+      "title": "LORA INFO"
+    }
+  },
+  "331": {
+    "inputs": {
+      "text": [
+        "320",
+        0
+      ],
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "1",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "353": {
+    "inputs": {
+      "images": [
+        "89",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image SWAPPED"
+    }
+  },
+  "506": {
+    "inputs": {
+      "images": [
+        "561",
+        3
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Aperçu Image"
+    }
+  },
+  "524": {
+    "inputs": {
+      "session_id": "deeplab_session",
+      "quality": 92,
+      "optimize": true,
+      "progressive": true,
+      "is_censored": false,
+      "user_hash": "",
+      "images": [
+        "540",
+        0
+      ]
+    },
+    "class_type": "NudeetSaveJPG",
+    "_meta": {
+      "title": "Nudeet Save JPG"
+    }
+  },
+  "525": {
+    "inputs": {
+      "image": "Capture d'écran 2025-05-13 220212.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Charger Image"
+    }
+  },
+  "540": {
+    "inputs": {
+      "upscale_model": "RealESRGAN_x2.pth",
+      "mode": "rescale",
+      "rescale_factor": 1.5000000000000002,
+      "resize_width": 1024,
+      "resampling_method": "lanczos",
+      "supersample": "true",
+      "rounding_modulus": 8,
+      "image": [
+        "562",
+        0
+      ]
+    },
+    "class_type": "CR Upscale Image",
+    "_meta": {
+      "title": "🔍 CR Upscale Image"
+    }
+  },
+  "561": {
+    "inputs": {
+      "object": "face",
+      "padding": 300,
+      "image": [
+        "525",
+        0
+      ]
+    },
+    "class_type": "ToolYoloCropper",
+    "_meta": {
+      "title": "ToolYoloCropper"
+    }
+  },
+  "562": {
+    "inputs": {
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "destination": [
+        "89",
+        0
+      ],
+      "source": [
+        "15",
+        0
+      ],
+      "mask": [
+        "566",
+        0
+      ]
+    },
+    "class_type": "ImageCompositeMasked",
+    "_meta": {
+      "title": "ImageCompositeMasked"
+    }
+  },
+  "563": {
+    "inputs": {
+      "face": true,
+      "left_eyebrow": false,
+      "right_eyebrow": false,
+      "left_eye": false,
+      "right_eye": false,
+      "left_pupil": false,
+      "right_pupil": false,
+      "lips": false,
+      "number_of_faces": 1,
+      "confidence": 0.4000000000000001,
+      "refine_mask": true,
+      "images": [
+        "15",
+        0
+      ]
+    },
+    "class_type": "APersonFaceLandmarkMaskGenerator",
+    "_meta": {
+      "title": "A Person Face Landmark Mask Generator"
+    }
+  },
+  "564": {
+    "inputs": {
+      "dilation": 20,
+      "mask": [
+        "563",
+        0
+      ]
+    },
+    "class_type": "ImpactDilateMask",
+    "_meta": {
+      "title": "Dilate Mask"
+    }
+  },
+  "565": {
+    "inputs": {
+      "amount": 15,
+      "device": "auto",
+      "mask": [
+        "564",
+        0
+      ]
+    },
+    "class_type": "MaskBlur+",
+    "_meta": {
+      "title": "🔧 Mask Blur"
+    }
+  },
+  "566": {
+    "inputs": {
+      "mask": [
+        "565",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InverserMasque"
+    }
+  },
+  "567": {
+    "inputs": {
+      "mask": [
+        "566",
+        0
+      ]
+    },
+    "class_type": "MaskPreview+",
+    "_meta": {
+      "title": "🔧 Mask Preview"
+    }
+  }
+}

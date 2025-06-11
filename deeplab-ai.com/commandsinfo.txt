@@ -1,0 +1,20 @@
+in root of website folder:
+
+npm run dev
+(for developing)
+
+----------------------------------------
+
+npm run build
+(build website)
+
+npm start
+(for nudeet)
+
+npm run start -- -p 3001
+(for deeplab-ai)
+
+----------------------------------------
+
+cloudflared tunnel run c0e8b44f-240a-4a75-8df3-721fea02f418
+(start cloudflare tunnel)

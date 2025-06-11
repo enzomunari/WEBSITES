@@ -1,0 +1,40 @@
+{
+  "user_1749644704481_device_13e9ee0": {
+    "userId": "user_1749644704481_device_13e9ee0",
+    "deviceId": "device_13e9ee0",
+    "credits": 10,
+    "lastFreeTrialDate": "2025-06-11T12:27:03.870Z",
+    "firstVisitDate": "2025-06-11T12:25:04.149Z",
+    "lastVisitDate": "2025-06-11T13:55:32.568Z",
+    "totalGenerations": 0,
+    "totalFreeTrialsUsed": 1,
+    "ipAddress": "::1",
+    "site": "nudeet",
+    "lastSyncDate": "2025-06-11T14:10:57.748Z"
+  },
+  "user_unified_device_z9gfd7": {
+    "userId": "user_unified_device_z9gfd7",
+    "deviceId": "device_z9gfd7",
+    "credits": 6,
+    "lastFreeTrialDate": null,
+    "firstVisitDate": "2025-06-11T13:59:16.993Z",
+    "lastVisitDate": "2025-06-11T14:02:10.216Z",
+    "totalGenerations": 0,
+    "totalFreeTrialsUsed": 0,
+    "ipAddress": "::1",
+    "site": "nudeet",
+    "lastSyncDate": "2025-06-11T14:10:54.550Z"
+  },
+  "user_1749650955530_device_m6ocjl": {
+    "userId": "user_1749650955530_device_m6ocjl",
+    "deviceId": "device_m6ocjl",
+    "credits": 0,
+    "lastFreeTrialDate": null,
+    "firstVisitDate": "2025-06-11T14:09:15.131Z",
+    "lastVisitDate": "2025-06-11T14:54:11.280Z",
+    "totalGenerations": 0,
+    "totalFreeTrialsUsed": 0,
+    "ipAddress": "::1",
+    "site": "nudeet"
+  }
+}

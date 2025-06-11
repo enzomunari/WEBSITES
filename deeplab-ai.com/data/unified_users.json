@@ -1,0 +1,17 @@
+{
+  "user_1749644721131_device_13e9ee0": {
+    "userId": "user_1749644721131_device_13e9ee0",
+    "deviceId": "device_13e9ee0",
+    "credits": 0,
+    "lastFreeTrialDate": null,
+    "firstVisitDate": "2025-06-11T12:25:20.734Z",
+    "lastVisitDate": "2025-06-11T12:25:21.131Z",
+    "totalGenerations": 0,
+    "totalFreeTrialsUsed": 0,
+    "isBlocked": false,
+    "sitesUsed": [
+      "localhost"
+    ],
+    "lastSyncDate": "2025-06-11T12:25:21.131Z"
+  }
+}

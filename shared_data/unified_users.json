@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-06-11T14:54:43.632Z",
+  "users": {
+    "user_1749644721131_device_13e9ee0": {
+      "userId": "user_1749644721131_device_13e9ee0",
+      "deviceId": "device_13e9ee0",
+      "credits": 4,
+      "lastFreeTrialDate": null,
+      "firstVisitDate": "2025-06-11T12:25:04.149Z",
+      "lastVisitDate": "2025-06-11T13:47:34.857Z",
+      "totalGenerations": 0,
+      "totalFreeTrialsUsed": 1,
+      "isBlocked": false,
+      "sitesUsed": [
+        "localhost",
+        "unknown",
+        "deeplab"
+      ],
+      "lastSyncDate": "2025-06-11T14:08:06.097Z"
+    },
+    "user_unified_device_z9gfd7": {
+      "userId": "user_unified_device_z9gfd7",
+      "deviceId": "device_z9gfd7",
+      "credits": 0,
+      "lastFreeTrialDate": null,
+      "firstVisitDate": "2025-06-11T13:59:16.993Z",
+      "lastVisitDate": "2025-06-11T14:02:30.679Z",
+      "totalGenerations": 0,
+      "totalFreeTrialsUsed": 0,
+      "isBlocked": false,
+      "sitesUsed": [
+        "deeplab"
+      ],
+      "lastSyncDate": "2025-06-11T14:02:30.679Z"
+    },
+    "user_1749650955530_device_m6ocjl": {
+      "userId": "user_1749650955530_device_m6ocjl",
+      "deviceId": "device_m6ocjl",
+      "credits": 0,
+      "lastFreeTrialDate": null,
+      "firstVisitDate": "2025-06-11T14:09:15.131Z",
+      "lastVisitDate": "2025-06-11T14:54:43.632Z",
+      "totalGenerations": 0,
+      "totalFreeTrialsUsed": 0,
+      "isBlocked": false,
+      "sitesUsed": [
+        "unknown",
+        "deeplab"
+      ],
+      "lastSyncDate": "2025-06-11T14:54:43.632Z"
+    }
+  }
+}
